@@ -46,7 +46,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/choose_location.png)
 
-第三步：接下来要注意了，系统最好选择**CentOS 9 x64**，点击CentOS可以下拉选择9 x64
+第三步：接下来要注意了，系统最好选择**CentOS 9 x64** / **Rocky Linux 9**，点击CentOS可以下拉选择9 x64
 
 ![](./images/choose_system.png)
 
@@ -354,6 +354,35 @@ systemctl disable firewalld
 ![](./images/firewall_inactive.png)
 
 [在线检查端口是否开放](https://tool.chinaz.com/port)
+
+**5.启动shadowsocks报错**
+
+`FileNotFoundError: [Errno 2] No such file or directory: b'liblibsodium.a'`
+
+下载安装sodium
+```bash
+wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.18-stable.tar.gz
+tar -zxf libsodium-1.0.18-stable.tar.gz
+cd libsodium-stable
+```
+
+编译安装
+```bash
+./configure --prefix=/usr
+make && make check
+sudo make install
+sudo ldconfig
+```
+
+到libsodium的安装目录建立软连接
+
+```bash
+cd /usr/lib64
+sudo ln -s libsodium.a liblibsodium.a
+```
+
+再次运行start就可以了
+
 
 # 讨论
 ## Discord

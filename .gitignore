@@ -1,0 +1,80 @@
+.idea/
+/*.index
+/*.pkl
+/*.pt
+
+# Python bytecode/compiled files
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info
+dist
+build
+*.egg-info
+
+# Jupyter Notebook
+*.ipynb_checkpoints
+
+# Pyenv
+.python-version
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Pytest
+.pytest_cache
+
+# Virtualenv
+venv
+ENV
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+
+# Flask
+instance
+
+# PyInstaller
+*.spec
+
+# Sphinx
+_build
+
+# Pytest
+.pytest_cache
+
+# Pylint
+.pylint.d
+
+# MyPy
+.mypy_cache
+
+# Tox
+.tox
+
+# Cython
+*.pyx
+*.pxd
+*.pyd
+*.so
+
+# Pyre
+.pyre
+
+# Dask
+dask_worker_space
+
+# Custom
+/temp/
+*.env
+*.pem
+/.files/
+/.download/
+/logs/
+/.chainlit/translations/
